@@ -1,0 +1,36 @@
+{
+  "name": "icell-form-controls",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "icell-form-controls/src",
+  "prefix": "icell",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "icell-form-controls/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "icell-form-controls/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "icell-form-controls/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "icell-form-controls/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
