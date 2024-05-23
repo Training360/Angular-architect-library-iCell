@@ -1,1 +1,27 @@
-<p>country-selector works!</p>
+<div>
+  @for (country of countries; track $index) {
+    <button class="flex flex-col item-center rounded-md border p-2 relative">
+      @if (!disabled && selected === country.code) {
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          class="absolute -top-2 -right-2"
+        >
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            fill="green"
+            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+          />
+          <path d="M11.003 16l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z" fill="#fff" />
+        </svg>
+      }
+      <img
+        [src]="'assets/flag/' + (country.code | lowercase) + '-flag.gif'"
+        [alt]="country.name"
+      />
+      <p class="text-xs text-gray-700 mt-1">{{ country.name }}</p>
+    </button>
+  }
+</div>
