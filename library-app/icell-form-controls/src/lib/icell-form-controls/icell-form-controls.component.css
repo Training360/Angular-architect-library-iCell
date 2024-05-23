@@ -1,5 +1,5 @@
 @import url('node_modules/bootstrap/dist/css/bootstrap.min.css');
 
-:root {
-  --bs-btn-border-radius: 1rem;
+.btn {
+  --bs-btn-border-radius: 0.25rem;
 }
