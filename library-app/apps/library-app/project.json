@@ -17,7 +17,12 @@
         "tsConfig": "apps/library-app/tsconfig.app.json",
         "assets": [
           "apps/library-app/src/favicon.ico",
-          "apps/library-app/src/assets"
+          "apps/library-app/src/assets",
+          {
+            "glob": "**/*",
+            "input": "icell-form-controls/src/assets",
+            "output": "assets"
+          }
         ],
         "styles": ["apps/library-app/src/styles.css"],
         "scripts": []

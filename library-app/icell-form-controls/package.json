@@ -1,5 +1,5 @@
 {
-  "name": "@icell/form-controls",
+  "name": "icell-form-controls",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
