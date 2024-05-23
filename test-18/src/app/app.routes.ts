@@ -11,6 +11,11 @@ export const routes: Routes = [
         loadComponent: () => import('./page/product/product.component').then( m => m.ProductComponent)
     },
     {
+        path: 'products/:id',
+        loadComponent: () => import('./page/product-editor/product-editor.component').then( 
+            m => m.ProductEditorComponent)
+    },
+    {
         path: '**',
         redirectTo: '',
     },

@@ -5,7 +5,8 @@
       [disabled]="disabled"
       [attr.tabindex]="selected === country.code ? -1 : 0"
       (click)="selectCountry(country.code)"
-      [class.selected]="!disabled && selected === country.code">
+      [class.selected]="!disabled && selected === country.code"
+      type="button">
       @if (!disabled && selected === country.code) {
         <svg
           xmlns="http://www.w3.org/2000/svg"

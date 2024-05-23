@@ -18,4 +18,12 @@ describe('CountrySelectorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it ('five buttons should exist', () => {
+    fixture.detectChanges();
+
+    const buttons = fixture.nativeElement.querySelectorAll('button.border.p-2');
+    expect(buttons.length).toEqual( component.countries.length );
+  });
+
 });

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule, LowerCasePipe } from '@angular/common';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -22,7 +22,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class CountrySelectorComponent implements ControlValueAccessor {
 
-  countries = [
+  @Input() countries = [
     { code: 'HU', name: 'HUN' },
     { code : 'US', name: 'USA' },
     { code: 'NL', name: 'NLD' },

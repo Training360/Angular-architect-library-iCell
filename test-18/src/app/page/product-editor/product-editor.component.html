@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center mt-5">
+    <form (ngSubmit)="onSave()" [formGroup]="productForm" class="w-50">
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" type="number" formControlName="price">
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <input class="form-control" type="text" formControlName="category">
+        </div>
+        <div class="form-group">
+            <label>Origin</label>
+            <icell-country-selector formControlName="origin"></icell-country-selector>
+        </div>
+
+        <div class="d-flex mt-3">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa fa-save"></i> Save
+            </button>
+        </div>
+    </form>
+</div>
+
+<pre>
+    {{ productForm.value | json }}
+</pre>
