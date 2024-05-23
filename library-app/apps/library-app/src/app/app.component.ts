@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { IcellFormControlsComponent } from '@icell/form-controls';
+import { CountrySelectorComponent } from '@icell/form-controls';
 
 @Component({
   standalone: true,
@@ -9,6 +10,7 @@ import { IcellFormControlsComponent } from '@icell/form-controls';
     NxWelcomeComponent,
     RouterModule,
     IcellFormControlsComponent,
+    CountrySelectorComponent,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
