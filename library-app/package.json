@@ -2,7 +2,12 @@
   "name": "@library-app/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "npx nx run library-app:serve",
+    "build:icell": "npx nx build icell-form-controls",
+    "build:app": "npx nx build library-app",
+    "publish": "cd icell-form-controls && npm version patch && cd .. && npm run build:icell && cd dist/icell-form-controls && npm publish --access=public"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.3.0",
